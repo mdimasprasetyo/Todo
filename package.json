@@ -4,9 +4,12 @@
   "description": "building todo app using mongodb, express, react and nodejs",
   "main": "index.js",
   "scripts": {
-  "start": "node index.js",
-  "start-watch": "nodemon index.js",
-  "dev": "concurrently \"yarn run start-watch\" \"cd client && yarn start\""
+    "build": "cd client && npm run build",
+    "install-client": "cd-client && npm run build",
+    "heroku-postbuild": "npm run install-client && npm run build",
+    "start": "node index.js",
+    "start-watch": "nodemon index.js",
+    "dev": "concurrently \"yarn run start-watch\" \"cd client && yarn start\""
   },
   "author": "Ojini Jude",
   "license": "MIT",
